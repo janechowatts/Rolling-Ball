@@ -5,28 +5,39 @@ using UnityEngine.UI;
 public class LivesText : MonoBehaviour {
 
 	public int lifecount; 
-	public Text livesText;
 	private string livesString;
+	private Text text;
+	public static int dead;
 
-	// Use this for initialization
 	void Start () {
-
-		lifecount = 3;
+		text = GetComponent<Text>();
 		displayText ();
+		dead = 0;
+
 	}
 
-	void displayText (){
+	void displayText () {
 		livesString = "Lives: ";
 		for (int i = 1; i <= lifecount; i++)
 		{
 			livesString = livesString + "X ";
 		}
-		livesText.text = livesString;
+		text.text = livesString;
 	}
-		
-	void detractLife (){
+	void Update(){
+		if(ResetWall.hit == 1){
+			detractLife ();
+			ResetWall.hit = 0;
+	}
+
+	}
+
+	void detractLife(){
 		lifecount = lifecount - 1;
 		displayText ();
+		if (lifecount == 0) {
+			dead = 1;
+		}
 	}
 
 

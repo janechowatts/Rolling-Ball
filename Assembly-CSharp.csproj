@@ -46,7 +46,13 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CubePlacement.cs" />
+     <Compile Include="Assets\Scripts\LV1manager.cs" />
+     <Compile Include="Assets\Scripts\LV2manager.cs" />
      <Compile Include="Assets\Scripts\LivesText.cs" />
+     <Compile Include="Assets\Scripts\MessageText.cs" />
+     <Compile Include="Assets\Scripts\OrangeCube.cs" />
+     <Compile Include="Assets\Scripts\ResetWall.cs" />
+     <Compile Include="Assets\Scripts\ScoreText.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
